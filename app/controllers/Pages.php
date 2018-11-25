@@ -3,14 +3,13 @@
 class Pages extends Controller {
     
     public function __construct() {
-        $this->postModel = $this->model('Post');
+        // Load the Model here
+        // $this->postModel = $this->model('__YOUR_MODEL_NAME__');
     }
 
     public function index() {
-        $posts = $this->postModel->getPosts();
         $data = [
-            'title' => 'welcome',
-            'posts' => $posts
+            'title' => 'ViD-MVC Php Framework',
         ];
         $this->view('pages/index', $data);
     }
